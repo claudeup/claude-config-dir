@@ -18,6 +18,6 @@ Portable configuration for Claude Code CLI.
 ## Quick Start
 
 ```bash
-git clone https://github.com/claudeup/claude-config-dir.git ~/.claude-test
-export CLAUDE_CONFIG_DIR=~/.claude-test
+git clone https://github.com/claudeup/claude-config-dir.git ~/.claude-reset
+export CLAUDE_CONFIG_DIR=~/.claude-reset
 ```
