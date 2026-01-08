@@ -1,0 +1,25 @@
+{
+  "name": "Claude Code Sandbox",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "configureZshAsDefaultShell": false,
+      "installOhMyZsh": false,
+      "installOhMyZshConfig": false,
+      "upgradePackages": true
+    }
+  },
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "${containerWorkspaceFolder}"
+  },
+  "postCreateCommand": ".devcontainer/post-create.sh",
+  "postStartCommand": ".devcontainer/post-start.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
