@@ -106,7 +106,7 @@ Create `plugins/setup-marketplaces.local.json` (gitignored):
 claude plugin marketplace list
 
 # Browse plugins in a marketplace
-claude plugin list superpowers-marketplace
+claudeup plugin list superpowers-marketplace
 
 # Install a plugin
 claude plugin install superpowers@superpowers-marketplace
