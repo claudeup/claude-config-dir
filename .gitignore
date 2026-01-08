@@ -1,0 +1,12 @@
+# ABOUTME: Files to exclude from version control
+# ABOUTME: Timestamp files, caches, and local settings
+
+# Timestamp files for update throttling
+.last_claude_update_check
+.last_plugin_check
+
+# Plugin cache (downloaded plugins)
+plugins/cache/
+
+# Local settings that shouldn't be shared
+*.local.md
