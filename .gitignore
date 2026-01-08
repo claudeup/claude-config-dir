@@ -5,8 +5,17 @@
 .last_claude_update_check
 .last_plugin_check
 
-# Plugin cache (downloaded plugins)
+# Plugin cache and installed marketplaces (downloaded at runtime)
 plugins/cache/
+plugins/marketplaces/
+plugins/known_marketplaces.json
+
+# Claude Code runtime files
+.claude.json
+.claude.json.backup
+debug/
+statsig/
 
 # Local settings that shouldn't be shared
 *.local.md
+*.local.json

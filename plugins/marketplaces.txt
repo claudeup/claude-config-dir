@@ -1,9 +1,0 @@
-# ABOUTME: Example plugin marketplaces for Claude Code
-# ABOUTME: Add marketplace URLs here, one per line
-
-# Official Anthropic plugins
-anthropics/claude-code
-
-# Community marketplaces
-ccplugins/marketplace
-obra/superpowers-marketplace

@@ -1,0 +1,14 @@
+{
+  "marketplaces": {
+    "claude-code-plugins": {
+      "source": "github",
+      "repo": "anthropics/claude-code",
+      "description": "Official Anthropic plugins"
+    },
+    "superpowers-marketplace": {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace",
+      "description": "Superpowers skills and workflows"
+    }
+  }
+}
