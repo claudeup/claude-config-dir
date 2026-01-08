@@ -31,8 +31,8 @@ echo "Checking for Claude Code updates..."
 # Get current version before upgrading
 OLD_VERSION=$(claude --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1 || echo "not installed")
 
-# Run the upgrade via claudeup
-claudeup 2>&1 || true
+# Run the upgrade via claude's built-in update command
+claude update 2>&1 || true
 
 # Get new version after upgrading
 NEW_VERSION=$(claude --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1 || echo "not installed")
