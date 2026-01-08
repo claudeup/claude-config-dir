@@ -10,6 +10,11 @@ curl -fsSL https://raw.githubusercontent.com/claudeup/claudeup/main/install.sh |
 echo "Installing Claude Code..."
 npm install -g @anthropic-ai/claude-code
 
+echo "Adding default marketplaces..."
+export PATH="$HOME/.local/bin:$PATH"
+claudeup marketplace add anthropics/claude-code
+claudeup marketplace add obra/superpowers-marketplace
+
 echo "Allowing direnv for workspace..."
 direnv allow .
 
