@@ -8,7 +8,7 @@ echo "Installing claudeup..."
 curl -fsSL https://raw.githubusercontent.com/claudeup/claudeup/main/install.sh | bash
 
 echo "Installing Claude Code..."
-"$HOME/.local/bin/claudeup"
+npm install -g @anthropic-ai/claude-code
 
 echo "Allowing direnv for workspace..."
 direnv allow .
