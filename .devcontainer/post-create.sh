@@ -11,8 +11,8 @@ echo "Installing Claude Code..."
 npm install -g @anthropic-ai/claude-code
 
 echo "Adding default marketplaces..."
-claude plugin marketplace add anthropics/claude-code
-claude plugin marketplace add obra/superpowers-marketplace
+claude plugin marketplace add anthropics/claude-code || true
+claude plugin marketplace add obra/superpowers-marketplace || true
 
 echo "Allowing direnv for workspace..."
 direnv allow .
