@@ -73,7 +73,7 @@ for name, marketplace in config.get("marketplaces", {}).items():
             )
             print(f"    Added {name}")
         except subprocess.CalledProcessError as e:
-            if b"already" in e.stderr.lower() or b"already" in e.stdout.lower():
+            if "already" in e.stderr.decode().lower() or "already" in e.stdout.decode().lower():
                 print(f"    {name} (already installed)")
             else:
                 print(f"    {name} failed: {e.stderr.decode()[:100]}")
