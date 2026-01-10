@@ -19,6 +19,7 @@ cd ~/.claude
 ```
 
 The interactive setup will:
+
 1. Install Claude Code and claudeup
 2. Add default marketplaces (Anthropic official + Superpowers)
 3. Configure direnv for auto-updates
@@ -39,11 +40,13 @@ The interactive setup will:
 ## Setup Modes
 
 **Interactive mode (default):**
+
 ```bash
 ./setup.sh
 ```
 
 **Auto mode (for CI/containers):**
+
 ```bash
 SETUP_MODE=auto ./setup.sh
 ```
@@ -51,12 +54,14 @@ SETUP_MODE=auto ./setup.sh
 ## How Auto-Updates Work
 
 When you enter this directory, `.envrc` runs:
+
 1. `auto-upgrade-claude.sh` (background) - updates claudeup and Claude Code
 2. `auto-update-plugins.sh` - syncs plugins from marketplaces
 
 Both scripts throttle to once per day using timestamp files.
 
 **Requirements:**
+
 - direnv installed and hooked into your shell
 - Run `direnv allow` after cloning
 
@@ -79,6 +84,7 @@ Edit `plugins/setup-marketplaces.json`:
 ```
 
 Then run `./setup.sh` or manually:
+
 ```bash
 claude plugin marketplace add username/repo
 ```
@@ -103,10 +109,11 @@ Create `plugins/setup-marketplaces.local.json` (gitignored):
 
 ```bash
 # List installed marketplaces
-claude plugin marketplace list
+claudeup marketplace list
 
-# List installed plugins
+# Summary of installed plugins
 claudeup plugin list
+claudeup plugin list --summary
 
 # Install a plugin
 claude plugin install superpowers@superpowers-marketplace
