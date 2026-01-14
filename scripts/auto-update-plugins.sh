@@ -28,8 +28,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 echo "Checking for plugin/marketplace updates..."
 
+# Update claudeup
+claudeup update
+
 # Use claudeup to sync marketplaces and plugins
 claudeup upgrade 2>&1 || true
 
 # Mark as checked today
 date +%Y-%m-%d > "$LAST_CHECK_FILE"
+
+claudeup plugin list --enabled --format table
