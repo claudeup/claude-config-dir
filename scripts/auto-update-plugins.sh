@@ -48,6 +48,12 @@ if [[ "$FORCE" == false && -f "$LAST_CHECK_FILE" ]]; then
     fi
 fi
 
+# Display current settings
+log "Displaying Claude Code user settings..."
+if [[ "$QUIET" == false ]]; then
+    "$SCRIPT_DIR"/claude-config list -e
+fi
+
 # Run claudeup with closed stdin and explicit wait
 if [[ "$QUIET" == true ]]; then
     claudeup update > /dev/null 2>&1
